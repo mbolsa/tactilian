@@ -4,6 +4,8 @@ Trabajo de Laboratorio de Sistemas de Información
 # Prerequisites
 * Node.js and npm (https://nodejs.org/en/)
 * Express (http://expressjs.com/)
+* SQLite3 (https://www.sqlite.org/index.html)
+* Knex.js (http://knexjs.org/)
 
 # Install
 * git clone https://github.com/mbolsa/tactilian.git
