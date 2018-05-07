@@ -1,0 +1,45 @@
+extends layout
+
+block content 
+  br
+  br
+  div(class='container')
+    div(class='row justify-content-center')
+      div(class='col-md-5')
+        div(class='form-group has-feedback')
+          h2 Catálogo de pictogramas del estudiante
+          label(class='control-label') Nombre
+          input(type='text' id='name' class='form-control input-sm chat-input', placeholder='Nombre')
+          br
+          label(class='control-label') Apellidos 
+          input(type='text' id='surname' class='form-control input-sm chat-input' placeholder='Apellidos')
+          br
+          div(class='wrapper')
+          div(class='text-center')
+            span(class='group-btn btn-group-justified ')
+              a(href='#' class='btn btn-light btn-block') Actualizar
+            br
+            span(class='group-btn btn-group-justified ')
+              a(href='#' class='btn btn-outline-light btn-block') Borrar
+      div(class='col-md-2')
+      div(class='col-md-4')
+        br
+        br
+        div(class='wrapper')
+          div(class='text-center')
+            span(class='group-btn btn-group-justified ')
+              a(href='#' class='btn btn-light btn-block') Catálogo
+            br
+            br
+            span(class='group-btn btn-group-justified ')
+              a(href='#' class='btn btn-light btn-block') Seguimiento
+            br
+            br
+            span(class='group-btn btn-group-justified ')
+              a(href='#' class='btn btn-light btn-block') Profesores vinculados
+  br
+  br
+  br
+  br
+  br
+  br
