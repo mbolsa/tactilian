@@ -10,12 +10,12 @@ require('./app_server/models/create_bd');
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var studentRouter = require('./app_server/routes/student');
-var catalogoRouter = require('./app_server/routes/catalogo');
-var activityRouter = require('./app_server/routes/activityStu');
+var catalogoRouter = require('./app_server/routes/catalog');
+var activityRouter = require('./app_server/routes/activity_student');
 var monitoringRouter = require('./app_server/routes/monitoring');
 var linkedTeachersRouter = require('./app_server/routes/linked_teachers');
-var chooseActRouter = require('./app_server/routes/chooseAct');
-var chooseStuRouter = require('./app_server/routes/chooseStu');
+var chooseActRouter = require('./app_server/routes/choose_activity');
+var chooseStuRouter = require('./app_server/routes/choose_student');
 var executionRouter = require('./app_server/routes/execution');
 
 var app = express();
@@ -33,12 +33,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/index', indexRouter);
 app.use('/users', usersRouter);
 app.use('/student', studentRouter);
-app.use('/catalogo', catalogoRouter);
-app.use('/activityStu', activityRouter);
+app.use('/catalog', catalogoRouter);
+app.use('/activity_student', activityRouter);
 app.use('/monitoring', monitoringRouter);
 app.use('/linked_teachers', linkedTeachersRouter);
-app.use('/chooseAct', chooseActRouter);
-app.use('/chooseStu', chooseStuRouter);
+app.use('/choose_activity', chooseActRouter);
+app.use('/choose_student', chooseStuRouter);
 app.use('/execution', executionRouter);
 
 // catch 404 and forward to error handler

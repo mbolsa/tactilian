@@ -54,6 +54,7 @@ db.schema.createTable('Teacher', function (table) {
 	table.string('name');
 	table.string('surname');
 	table.string('password');
+	table.string('RFID');
 }).then(() => {
 	console.log('Creating Teacher table');
 })
@@ -79,6 +80,8 @@ db.schema.createTable('Student', function (table) {
 	table.increments('id').primary();
 	table.string('name');
 	table.string('surname');
+	table.string('alias');
+	table.string('RFID');
 }).then(() => {
 	console.log('Creating Student table');
 })

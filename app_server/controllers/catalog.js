@@ -1,6 +1,6 @@
 
 const catalogo = function(req, res) {
-    res.render('catalogo', { });
+    res.render('catalog', { });
 };
 
 module.exports = {

@@ -1,6 +1,6 @@
 
 const chooseAct = function(req, res) {
-    res.render('chooseAct', { });
+    res.render('choose_activity', { });
 };
 
 module.exports = {

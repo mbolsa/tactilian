@@ -1,45 +1,38 @@
 extends layout
 
 block content 
-  br
-  br
-  div(class='container')
+  div(class='container main-container')
     div(class='row justify-content-center')
       div(class='col-md-5')
         div(class='form-group has-feedback')
-          h2 Información del estudiante
-          label(class='control-label') Nombre
-          input(type='text' id='name' class='form-control input-sm chat-input', placeholder='Nombre')
-          br
-          label(class='control-label') Apellidos 
-          input(type='text' id='surname' class='form-control input-sm chat-input' placeholder='Apellidos')
-          br
-          div(class='wrapper')
-          div(class='text-center')
-            span(class='group-btn btn-group-justified ')
-              a(href='#' class='btn btn-light btn-block') Actualizar
+          form(method='post' action='')
+            h2 Información del estudiante
+            label(class='control-label') Nombre
+            input(type='text' name='name' class='form-control input-sm chat-input', placeholder='Nombre')
             br
-            span(class='group-btn btn-group-justified ')
-              a(href='#' class='btn btn-outline-light btn-block') Borrar
-      div(class='col-md-2')
-      div(class='col-md-4')
-        br
-        br
+            label(class='control-label') Apellidos 
+            input(type='text' name='surname' class='form-control input-sm chat-input' placeholder='Apellidos')
+            br
+            label(class='control-label') Alias 
+            input(type='text' name='alias' class='form-control input-sm chat-input' placeholder='Apellidos')
+            br
+            input(type='submit' class='btn btn-light btn-block' name='actualizar' value='Actualizar') 
+            br
+            input(type='submit' class='btn btn-outline-light btn-block' name='borrar' value='Borrar') 
+      div(class='col-md-4 offset-md-2')
         div(class='wrapper')
           div(class='text-center')
-            span(class='group-btn btn-group-justified ')
-              a(href='#' class='btn btn-light btn-block') Catálogo
+            br
+            br
             br
             br
             span(class='group-btn btn-group-justified ')
-              a(href='#' class='btn btn-light btn-block') Seguimiento
+              a(href='/catalog' class='btn btn-light btn-block') Catálogo
             br
             br
             span(class='group-btn btn-group-justified ')
-              a(href='#' class='btn btn-light btn-block') Profesores vinculados
-  br
-  br
-  br
-  br
-  br
-  br
+              a(href='/monitoring' class='btn btn-light btn-block') Seguimiento
+            br
+            br
+            span(class='group-btn btn-group-justified ')
+              a(href='/linked_teachers' class='btn btn-light btn-block') Profesores vinculados

@@ -1,6 +1,6 @@
 
 const chooseStu = function(req, res) {
-    res.render('chooseStu', { });
+    res.render('choose_student', { });
 };
 
 module.exports = {
