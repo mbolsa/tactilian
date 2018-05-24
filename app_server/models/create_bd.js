@@ -139,3 +139,5 @@ db.schema.createTable('use', function (table) {
 }).then(() => {
 	console.log('Creating use table');
 })
+
+module.exports = db;

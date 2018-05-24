@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var knex = require('knex');
 
-require('./app_server/models/create_bd');
+var sqlite = require('./app_server/models/connect_bd');
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
@@ -17,6 +17,7 @@ var linkedTeachersRouter = require('./app_server/routes/linked_teachers');
 var chooseActRouter = require('./app_server/routes/choose_activity');
 var chooseStuRouter = require('./app_server/routes/choose_student');
 var executionRouter = require('./app_server/routes/execution');
+var loginRouter = require('./app_server/routes/login');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/linked_teachers', linkedTeachersRouter);
 app.use('/choose_activity', chooseActRouter);
 app.use('/choose_student', chooseStuRouter);
 app.use('/execution', executionRouter);
+app.use('/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
